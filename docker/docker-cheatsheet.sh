@@ -17,7 +17,7 @@
 
  sudo systemctl restart docker
 
- show available storage space
+ df -H         --show available storage space
 
- df -H
+ sudo lsof -i -P -n | grep LISTEN        ---List of ports exposed in linux
 
