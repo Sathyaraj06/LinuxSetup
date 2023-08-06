@@ -33,3 +33,7 @@ services:
     image: billchurch/webssh2
     ports:
       - 8001:2222
+
+
+volumes:
+  portainer_data:
