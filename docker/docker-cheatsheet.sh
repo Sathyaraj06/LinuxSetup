@@ -21,6 +21,9 @@
 
  sudo lsof -i -P -n | grep LISTEN        ---List of ports exposed in linux
 
+# avoid password prompt everytime
+git config --global credential.helper store
+
 export azure="Endpoint=https://evis-configuration.azconfig.io;Id=Y0lT-l0-s0:U4+fnNu37owDqeYPlBmp;Secret=YzCR2hHPgL3lKAkNA3rFr9NU/+UuycrZU6hvxNfkqLs="
 
 printenv azure
