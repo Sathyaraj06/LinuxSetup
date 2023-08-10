@@ -22,7 +22,7 @@ sudo mysqldump -h ${MYSQL_HOST} \
 		  -P ${MYSQL_PORT} \
 		  -u ${MYSQL_USER} \
 		  -p${MYSQL_PASSWORD} \
-      		  -R -E --triggers --single-transaction \
+      		  -R -E --hex-blob --triggers --single-transaction \
 		  ${DATABASE_NAME} > ${DB_BACKUP_PATH}/${TODAY}/${DATABASE_NAME}.sql 
 
 sudo sed -E 's/DEFINER=`[^`]+`@`[^`]+`//g' ${DB_BACKUP_PATH}/${TODAY}/${DATABASE_NAME}.sql > temp.sql
