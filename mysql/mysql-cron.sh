@@ -5,6 +5,8 @@ crontab -e
  0 0 * * * /home/ubuntu/rasa-evis/support/mysql_backup/mysql-backup.sh
  0 1 * * * /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor
 
+ */5 * * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
+
 sudo service cron reload
 
 # checking other users cron jobs
