@@ -5,7 +5,8 @@ crontab -e
  0 0 * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
  0 1 * * * . $HOME/.profile; /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t tag1
 
- */5 * * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
+# every 5 mins
+ */5 * * * *
 
 sudo service cron reload
 
@@ -13,7 +14,8 @@ sudo service cron reload
 crontab -u ubuntu -l
 crontab -u ubuntu -e
 
-. $HOME/.bash_profile
+# cron doesn't have access to env varibales, to make it available, append cmd
+. $HOME/.bash_profile; or . $HOME/.profile; 
 
 # to see history
 cat /var/log/syslog
