@@ -13,5 +13,8 @@ sudo service cron reload
 crontab -u ubuntu -l
 crontab -u ubuntu -e
 
+# to see history
+cat /var/log/syslog
+
 SET SQL_SAFE_UPDATES = 0;
 delete FROM evis.exceptionlog;
