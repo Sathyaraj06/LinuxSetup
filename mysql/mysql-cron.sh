@@ -3,7 +3,7 @@ chmod +x /mysql-backup.sh
 crontab -e
 
  0 0 * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
- 0 1 * * * . $HOME/.profile; /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t tag1
+ 0 1 * * *  /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t tag1
 
 # every 5 mins
  */5 * * * *
@@ -16,6 +16,10 @@ crontab -u ubuntu -e
 
 # cron doesn't have access to env varibales, to make it available, append cmd
 . $HOME/.bash_profile; or . $HOME/.profile; 
+
+azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI=
+ */1 * * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t monitor-error
+
 
 # to see history
 cat /var/log/syslog
