@@ -24,7 +24,7 @@
 # avoid password prompt everytime
 git config --global credential.helper store
 
-export azure="Endpoint=https://evis-configuration.azconfig.io;Id=Y0lT-l0-s0:U4+fnNu37owDqeYPlBmp;Secret=YzCR2hHPgL3lKAkNA3rFr9NU/+UuycrZU6hvxNfkqLs="
+export azure="Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI="
 
 printenv azure
 # list all env variables
