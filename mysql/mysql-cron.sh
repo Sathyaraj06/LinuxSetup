@@ -22,7 +22,11 @@ azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvi
 
 
 # to see history
+grep CRON /var/log/syslog
+
+# to see all history
 cat /var/log/syslog
+cat /var/log/syslog.1
 
 SET SQL_SAFE_UPDATES = 0;
 delete FROM evis.exceptionlog;
