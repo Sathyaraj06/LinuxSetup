@@ -1,10 +1,32 @@
-export azure="Endpoint=https://evis-configuration.azconfig.io;Id=Y0lT-l0-s0:U4+fnNu37owDqeYPlBmp;Secret=YzCR2hHPgL3lKAkNA3rFr9NU/+UuycrZU6hvxNfkqLs="
-
-printenv azure
-# list all env variables
-
 chmod +x /mysql-backup.sh
 
 crontab -e
 
-# 0 2 * * * root /mysql-backup.sh
+ 0 0 * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
+ 0 1 * * *  /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t tag1
+
+# every 5 mins
+ */5 * * * *
+
+sudo service cron reload
+
+# checking other users cron jobs
+crontab -u ubuntu -l
+crontab -u ubuntu -e
+
+# cron doesn't have access to env varibales, to make it available, append cmd
+. $HOME/.bash_profile; or . $HOME/.profile; 
+
+azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI=
+ */1 * * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t monitor-error
+
+
+# to see history
+grep CRON /var/log/syslog
+
+# to see all history
+cat /var/log/syslog
+cat /var/log/syslog.1
+
+SET SQL_SAFE_UPDATES = 0;
+delete FROM evis.exceptionlog;
