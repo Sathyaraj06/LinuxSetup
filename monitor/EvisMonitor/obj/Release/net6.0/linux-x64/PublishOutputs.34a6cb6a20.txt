@@ -1,0 +1,3 @@
+C:\BOT\EvisMonitor\LinuxExe\EvisMonitor.pdb
+C:\BOT\EvisMonitor\LinuxExe\EmailTemplates\send_mail_notification.html
+C:\BOT\EvisMonitor\LinuxExe\EvisMonitor

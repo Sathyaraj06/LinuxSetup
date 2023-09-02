@@ -1,0 +1,3 @@
+C:\Users\Administrator\Desktop\publish\EvisMonitor.pdb
+C:\Users\Administrator\Desktop\publish\EmailTemplates\send_mail_notification.html
+C:\Users\Administrator\Desktop\publish\EvisMonitor
