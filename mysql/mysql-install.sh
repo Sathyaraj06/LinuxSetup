@@ -13,7 +13,7 @@ vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # modify bind-address 127.0.0.1 to 0.0.0.0
 
-systemctl restart mysql
+sudo systemctl restart mysql
 
 sudo mysql -u root
 
@@ -44,12 +44,13 @@ FLUSH PRIVILEGES;
 
 GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost' with grant option;
 
-GRANT ALL PRIVILEGES ON *.* TO 'evis'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON * . * TO 'evis'@'%' WITH GRANT OPTION;
 
 # Only for amazon linux
 CREATE USER 'evis'@'ec2-13-233-225-237.ap-south-1.compute.amazonaws.com' IDENTIFIED BY 'Evis@123';
 GRANT ALL PRIVILEGES ON *.* TO 'evis'@'ec2-13-233-225-237.ap-south-1.compute.amazonaws.com';
 FLUSH PRIVILEGES;
 
+SET GLOBAL log_bin_trust_function_creators = 1;
 
 

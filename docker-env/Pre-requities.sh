@@ -1,3 +1,14 @@
+sudo apt update
+sudo apt install git
+
+# Docker compose
+
+sudo apt-get install curl 
+sudo apt-get install gnupg 
+sudo apt-get install ca-certificates 
+sudo apt-get install lsb-release
+sudo apt install docker-compose
+
 
  sudo docker rm -f $(sudo docker ps -aq)
 

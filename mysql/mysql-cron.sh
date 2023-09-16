@@ -2,8 +2,11 @@ chmod +x /mysql-backup.sh
 
 crontab -e
 
+ azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI=
+ ...............
+ ...............
  0 0 * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
- 0 1 * * *  /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t tag1
+ 30 0 * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t evis-monitor-error
 
 # every 5 mins
  */5 * * * *
@@ -18,7 +21,7 @@ crontab -u ubuntu -e
 . $HOME/.bash_profile; or . $HOME/.profile; 
 
 azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI=
- */1 * * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t monitor-error
+ 30 0 * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t monitor-error
 
 
 # to see history
