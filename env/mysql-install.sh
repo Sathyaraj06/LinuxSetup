@@ -28,9 +28,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'Evis@123';
 
 FLUSH PRIVILEGES;
 
-CREATE USER 'evis'@'localhost' IDENTIFIED BY 'Evis@123';
+CREATE USER 'evis'@'%' IDENTIFIED BY 'Evis@123';
 
-GRANT ALL PRIVILEGES ON * . * TO 'evis'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'evis'@'%';
 
 FLUSH PRIVILEGES;
 
@@ -50,6 +50,8 @@ GRANT ALL PRIVILEGES ON * . * TO 'evis'@'%' WITH GRANT OPTION;
 CREATE USER 'evis'@'ec2-13-233-225-237.ap-south-1.compute.amazonaws.com' IDENTIFIED BY 'Evis@123';
 GRANT ALL PRIVILEGES ON *.* TO 'evis'@'ec2-13-233-225-237.ap-south-1.compute.amazonaws.com';
 FLUSH PRIVILEGES;
+
+ SELECT user, host FROM mysql.user where user='evis' and host='localhost';
 
 SET GLOBAL log_bin_trust_function_creators = 1;
 
