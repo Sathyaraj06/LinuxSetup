@@ -33,3 +33,6 @@ cat /var/log/syslog.1
 
 SET SQL_SAFE_UPDATES = 0;
 delete FROM evis.exceptionlog;
+
+#to start the stopped mysql service
+sudo /etc/init.d/mysql start
