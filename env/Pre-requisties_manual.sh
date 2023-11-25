@@ -35,7 +35,50 @@ sudo apt install docker-compose
 # avoid password prompt everytime
 git config --global credential.helper store
 
-export azure="Endpoint=https://evis-prod.azconfig.io;Id=JajY;Secret=fZ5lXS1sizAxNEtuXf3hxpcJAY1lt2CjkkkC9s40yH8="
+export azure="Endpoint=https://evis-prod2.azconfig.io;Id=qAWi;Secret=QJFHEWMNv7Vbb/c1Qi+aEyhYH0IA0KSHteLdB7yk+8s="
 
 printenv azure
 # list all env variables
+
+cd DashboardApiLiveagent
+chmod 777 deploy.sh
+./deploy.sh
+cd ..
+
+cd BotReceiver
+chmod 777 deploy.sh
+./deploy.sh
+cd ..
+
+cd DashboardLiveagent
+chmod 777 deploy.sh
+./deploy.sh
+cd ..
+
+cd evis
+chmod 777 deploy.sh
+./deploy.sh
+cd ..
+
+cd MyChatHub
+chmod 777 deploy.sh
+./deploy.sh
+cd ..
+
+cd MyChatHub
+chmod 777 deploy.sh
+./deploy.sh
+cd ..
+
+cd LinuxSetup/tools
+chmod 777 deploy_nginx.sh
+./deploy_nginx.sh
+
+chmod 777 deploy_portainer.sh
+./deploy_portainer.sh
+
+chmod 777 deploy_webssh2.sh
+./deploy_webssh2.sh
+
+cd ..
+cd ..
