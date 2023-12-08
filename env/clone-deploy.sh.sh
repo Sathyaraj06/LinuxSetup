@@ -2,6 +2,7 @@ git config --global credential.helper store
 
 git clone https://github.com/Sathyaraj06/rasa-evis.git
 git clone https://github.com/Sathyaraj06/DashboardApiLiveagent.git
+git clone https://github.com/Sathyaraj06/DashboardLiveagent.git
 git clone https://github.com/Sathyaraj06/BotReceiver.git
 git clone https://github.com/Sathyaraj06/MyChatHub.git
 git clone https://github.com/Sathyaraj06/LinuxSetup.git
