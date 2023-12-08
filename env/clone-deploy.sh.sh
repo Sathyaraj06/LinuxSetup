@@ -29,7 +29,7 @@ chmod 777 deploy.sh
 ./deploy.sh
 cd ..
 
-cd MyChatHub
+cd Directline
 chmod 777 deploy.sh
 ./deploy.sh
 cd ..

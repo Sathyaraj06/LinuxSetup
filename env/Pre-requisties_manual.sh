@@ -35,7 +35,7 @@ sudo apt install docker-compose
 # avoid password prompt everytime
 git config --global credential.helper store
 
-export azure="Endpoint=https://evis-prod2.azconfig.io;Id=qAWi;Secret=QJFHEWMNv7Vbb/c1Qi+aEyhYH0IA0KSHteLdB7yk+8s="
+export azure="Endpoint=https://evis-prod3.azconfig.io;Id=6BX+;Secret=9i29RRiO/x3aqL41TvQHl/WEf0w2209yMu4UEYWBJ1o="
 
 printenv azure
 # list all env variables
