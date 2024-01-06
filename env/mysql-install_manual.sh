@@ -46,6 +46,9 @@ GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost' with grant option;
 
 GRANT ALL PRIVILEGES ON * . * TO 'evis'@'%' WITH GRANT OPTION;
 
+SET @@global.time_zone = '+00:00';
+SET @@session.time_zone = '+00:00';
+
 # Only for amazon linux
 CREATE USER 'evis'@'ec2-13-233-225-237.ap-south-1.compute.amazonaws.com' IDENTIFIED BY 'Evis@123';
 GRANT ALL PRIVILEGES ON *.* TO 'evis'@'ec2-13-233-225-237.ap-south-1.compute.amazonaws.com';
