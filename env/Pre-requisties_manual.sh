@@ -28,6 +28,10 @@ sudo apt install docker-compose
 
  sudo systemctl restart docker
 
+ docker load < busybox.tar.gz
+
+ docker update --restart unless-stopped $(docker ps -q)
+
  df -H         --show available storage space
 
  sudo lsof -i -P -n | grep LISTEN        ---List of ports exposed in linux
@@ -82,6 +86,3 @@ chmod 777 deploy_webssh2.sh
 
 cd ..
 cd ..
-
-
-docker update --restart unless-stopped $(docker ps -q)
