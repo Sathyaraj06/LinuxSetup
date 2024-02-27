@@ -82,3 +82,6 @@ chmod 777 deploy_webssh2.sh
 
 cd ..
 cd ..
+
+
+docker update --restart unless-stopped $(docker ps -q)
