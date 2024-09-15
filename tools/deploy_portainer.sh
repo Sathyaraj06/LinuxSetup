@@ -1,2 +1,2 @@
-sudo docker-compose up --build --force-recreate -d portainer
+sudo docker compose up --build --force-recreate -d portainer
 
