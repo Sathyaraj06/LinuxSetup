@@ -2,7 +2,7 @@ chmod +x /mysql-backup.sh
 
 crontab -e
 
- azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI=
+ azure = Endpoint=https://evis-prod-configuration.azconfig.io;Id=xmYm;Secret=Bmh4N9rp3ZX3gR7/XdiQy/ZNbz6bE37cbQBQ1HNF2Y8=
  ...............
  ...............
  0 0 * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
@@ -20,7 +20,7 @@ crontab -u ubuntu -e
 # cron doesn't have access to env varibales, to make it available, append cmd
 . $HOME/.bash_profile; or . $HOME/.profile; 
 
-azure = Endpoint=https://evis-config-production.azconfig.io;Id=s17+;Secret=6QZvipXS0L1eR59W+r659tqFE06OTzgV59qIm7YX1mI=
+azure = Endpoint=https://evis-prod-configuration.azconfig.io;Id=xmYm;Secret=Bmh4N9rp3ZX3gR7/XdiQy/ZNbz6bE37cbQBQ1HNF2Y8=
  30 0 * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t monitor-error
 
 
