@@ -5,7 +5,7 @@ crontab -e
  azure = Endpoint=https://evis-prod-configuration.azconfig.io;Id=xmYm;Secret=Bmh4N9rp3ZX3gR7/XdiQy/ZNbz6bE37cbQBQ1HNF2Y8=
  ...............
  ...............
- 0 0 * * * /home/ubuntu/LinuxSetup/mysql/mysql-backup.sh
+ 0 0 * * * /root/evis/LinuxSetup/env/mysql-backup.sh
  30 0 * * * env azure=$azure /home/ubuntu/EvisMonitor/LinuxExe/EvisMonitor 2>&1 | /usr/bin/logger -t evis-monitor-error
 
 # every 5 mins
