@@ -2,11 +2,12 @@ git config --global credential.helper store
 
 git clone https://github.com/Sathyaraj06/rasa-evis.git
 git clone https://github.com/Sathyaraj06/DashboardApiLiveagent.git
-git clone https://github.com/Sathyaraj06/DashboardLiveagent.git
+git clone https://github.com/Sathyaraj06/Directline.git
+git clone https://github.com/Sathyaraj06/EvisDashboard.git
 git clone https://github.com/Sathyaraj06/BotReceiver.git
 git clone https://github.com/Sathyaraj06/MyChatHub.git
 git clone https://github.com/Sathyaraj06/LinuxSetup.git
-git clone https://github.com/Sathyaraj06/evis.git
+git clone https://github.com/Sathyaraj06/Evisbot.git
 
 git config --global credential.helper store
 
@@ -20,12 +21,12 @@ chmod 777 deploy.sh
 ./deploy.sh
 cd ..
 
-cd DashboardLiveagent
+cd EvisDashboard
 chmod 777 deploy.sh
 ./deploy.sh
 cd ..
 
-cd evis
+cd Evisbot
 chmod 777 deploy.sh
 ./deploy.sh
 cd ..
